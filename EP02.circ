@@ -18,7 +18,7 @@
       <a name="valign" val="base"/>
     </tool>
   </lib>
-  <main name="MUX"/>
+  <main name="MAIN"/>
   <options>
     <a name="gateUndefined" val="ignore"/>
     <a name="simlimit" val="1000"/>
@@ -53,7 +53,7 @@
   </toolbar>
   <circuit name="MUX">
     <a name="circuit" val="MUX"/>
-    <a name="clabel" val="MUX"/>
+    <a name="clabel" val="MUX 4x2"/>
     <a name="clabelup" val="east"/>
     <a name="clabelfont" val="Dialog plain 12"/>
     <a name="clabelcolor" val="#000000"/>
@@ -158,7 +158,6 @@
     <a name="clabelup" val="east"/>
     <a name="clabelfont" val="Dialog plain 12"/>
     <a name="clabelcolor" val="#000000"/>
-    <comp loc="(380,210)" name="MUX"/>
   </circuit>
   <circuit name="SOMA">
     <a name="circuit" val="SOMA"/>
@@ -326,7 +325,7 @@
   </circuit>
   <circuit name="MUX pequeno">
     <a name="circuit" val="MUX pequeno"/>
-    <a name="clabel" val=""/>
+    <a name="clabel" val="1 0"/>
     <a name="clabelup" val="east"/>
     <a name="clabelfont" val="Dialog plain 12"/>
     <a name="clabelcolor" val="#000000"/>
