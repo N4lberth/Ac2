@@ -336,12 +336,9 @@
       <circ-port height="8" pin="100,160" width="8" x="46" y="56"/>
       <circ-port height="10" pin="320,200" width="10" x="75" y="65"/>
       <circ-port height="8" pin="160,110" width="8" x="66" y="46"/>
-      <circ-port height="8" pin="100,200" width="8" x="46" y="66"/>
+      <circ-port height="8" pin="100,210" width="8" x="46" y="66"/>
       <circ-anchor facing="east" height="6" width="6" x="77" y="67"/>
     </appear>
-    <wire from="(140,160)" to="(140,210)"/>
-    <wire from="(100,160)" to="(140,160)"/>
-    <wire from="(140,160)" to="(200,160)"/>
     <wire from="(250,210)" to="(250,220)"/>
     <wire from="(230,220)" to="(250,220)"/>
     <wire from="(250,210)" to="(270,210)"/>
@@ -349,44 +346,34 @@
     <wire from="(230,170)" to="(250,170)"/>
     <wire from="(250,190)" to="(270,190)"/>
     <wire from="(300,200)" to="(320,200)"/>
-    <wire from="(160,180)" to="(160,230)"/>
     <wire from="(160,110)" to="(160,180)"/>
+    <wire from="(100,160)" to="(200,160)"/>
+    <wire from="(160,180)" to="(170,180)"/>
+    <wire from="(190,180)" to="(200,180)"/>
+    <wire from="(100,210)" to="(200,210)"/>
+    <wire from="(160,180)" to="(160,230)"/>
     <wire from="(160,230)" to="(200,230)"/>
-    <wire from="(100,200)" to="(130,200)"/>
-    <wire from="(130,170)" to="(130,200)"/>
-    <wire from="(130,200)" to="(130,220)"/>
-    <wire from="(130,220)" to="(200,220)"/>
-    <wire from="(190,210)" to="(200,210)"/>
-    <wire from="(140,210)" to="(170,210)"/>
-    <wire from="(190,170)" to="(200,170)"/>
-    <wire from="(130,170)" to="(170,170)"/>
-    <wire from="(160,180)" to="(200,180)"/>
-    <comp lib="1" loc="(230,220)" name="AND Gate">
-      <a name="inputs" val="3"/>
-    </comp>
-    <comp lib="0" loc="(100,200)" name="Pin">
-      <a name="tristate" val="false"/>
-      <a name="label" val="/B"/>
-    </comp>
+    <comp lib="1" loc="(230,220)" name="AND Gate"/>
     <comp lib="0" loc="(160,110)" name="Pin">
       <a name="facing" val="south"/>
       <a name="tristate" val="false"/>
       <a name="label" val="Bivent"/>
     </comp>
-    <comp lib="1" loc="(190,210)" name="NOT Gate"/>
-    <comp lib="1" loc="(190,170)" name="NOT Gate"/>
     <comp lib="1" loc="(300,200)" name="OR Gate"/>
     <comp lib="0" loc="(320,200)" name="Pin">
       <a name="facing" val="west"/>
       <a name="output" val="true"/>
       <a name="label" val="S"/>
     </comp>
-    <comp lib="1" loc="(230,170)" name="AND Gate">
-      <a name="inputs" val="3"/>
+    <comp lib="0" loc="(100,210)" name="Pin">
+      <a name="tristate" val="false"/>
+      <a name="label" val="/B"/>
     </comp>
+    <comp lib="1" loc="(230,170)" name="AND Gate"/>
     <comp lib="0" loc="(100,160)" name="Pin">
       <a name="tristate" val="false"/>
       <a name="label" val="B"/>
     </comp>
+    <comp lib="1" loc="(190,180)" name="NOT Gate"/>
   </circuit>
 </project>
