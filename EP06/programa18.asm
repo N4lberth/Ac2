@@ -14,17 +14,29 @@
 main:
 addi $t0, $zero, 0x1001  # t0 = 0x00001001;
 sll  $t0, $t0,   16      # t0 = 0x10010000;
-lw   $s0, 0($t0)         # x  = 10;
-lw   $s1, 4($t0)         # x  = 5;
+lw   $s0, 0($t0)         # x  = 2;
+lw   $s1, 4($t0)         # y  = 5;
 addi $t1, $zero, 0       # i  = 0;
 addi $s2, $zero, 1	 # k  = 1;
 
-loop:
-mul  $s2, $s2,   $s0     # k = x * x;
-addi $t1, $t1,   1 	 # i++;
-bne  $t1, $s1,   loop    # for 1 = 0; i < y;
+loopi:
+beq  $s1, $zero, fim     # if (y == 0) {x^0 = 1}
+    
 
-sw   $s2, 8($t0)         # k = x * y
+addi $t2, $zero, 0       # t2 = 0;
+addi $t3, $zero, 0       # t3 = 0;
+loopj:
+    beq  $t3, $s0, multf # if ( j == x ) { multf }
+    add  $t2, $t2, $s2   # t2 = k + k;
+    addi $t3, $t3, 1     # j ++;
+    j    loopj           # loopi;
+multf:
+    add  $s2, $zero, $t2 # k = x^y;
+    addi $s1, $s1, -1    # y --;
+    j    loopi           # loopi;
+
+fim:
+    sw   $s2, 8($t0)     # memoria;
 
 .data
 x:  .word  2
