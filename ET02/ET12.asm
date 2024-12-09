@@ -14,8 +14,8 @@ lw   $s0, 0($t0)         # s0 = A;
 slt $t1, $zero, $s0      # if ( A > 0 ) { fim }
 bne $t1, $zero, fim      # if ( A > 0 ) { fim }
 sub $s0, $zero, $s0      # else { A  = |A| }
-sw  $s0, 0($t0)          # else { A  = |A| }
 fim:
+sw  $s0, 0($t0)          # A = s0
 
 .data
 A:  .word -1

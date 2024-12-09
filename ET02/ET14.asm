@@ -23,12 +23,12 @@ ori  $t6, $zero, 1       # t6  = 1
 sub  $t1, $s2,   $t6     # t1  = n - 1
 
 
-loop0:
+loop0: 
 loop1:
 sll  $t2, $s1, 2         # t2  = j * 4
 add  $t2, $t2, $t0       # *t2 = array[j]
 lw   $t3, 0($t2)         # t3  = array[j]
-lw   $t4, 4($t2)         # t3  = array[j + 1]
+lw   $t4, 4($t2)         # t4  = array[j + 1]
 
 slt  $t5, $t3, $t4       #(array[j] > array[j + 1]) ? 1 : 0
 bne  $t5, $zero, else    #(array[j] > array[j + 1]) ? 1 : 
