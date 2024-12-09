@@ -89,3 +89,7 @@ mult $a3, $a3            # x * x
 mflo $v0                 # $v0 = x^2
 jr   $ra                 
 fim:
+
+.data
+n:     .word 10                                      
+adr:   .word 0x10010008                              
