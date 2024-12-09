@@ -32,9 +32,14 @@ multi:
 add  $t2, $t2, $a0        # $t2 = $t2 + x
 addi $t3, $t3, -1         # $t3 = $t3 - 1
 bne  $t3, $zero, multi    # if( $t3 != 0 )
-or  $v0, $t2, $zero       # $v0 = $t2 
+or   $v0, $t2, $zero      # $v0 = $t2 
 addi $t1, $t1, -1         # y = y - 1
 j f                       # f
 end:
 jr $ra
 fim:
+
+.data
+    x: .word 2
+    y: .word 5
+    k: .word -1
